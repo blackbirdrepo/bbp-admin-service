@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: 'bbp-admin-service'
+  mvc:
+    favicon:
+      enabled: false
+  boot.admin.url: http://localhost:8060
+server:
+  port: 8060
+info:
+  app:
+    name: ${spring.application.name}
+    description: Admin Service Application.
+    version: 1.0.0
+
+management:
+  endpoint.health.show-details: always
+  endpoints.web.exposure.include: '*'
+  security.enabled: false
+endpoints.health.sensitive: false
+
+eureka:
+  client:
+    registryFetchIntervalInSeconds: 10
+    serviceUrl:
+      defaultZone: http://localhost:8061/eureka/
