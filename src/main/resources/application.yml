@@ -1,3 +1,4 @@
+#No configs in config service
 spring:
   application:
     name: 'bbp-admin-service'

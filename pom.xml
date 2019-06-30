@@ -3,21 +3,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.6.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>com.bbp</groupId>
+        <artifactId>bbp-bom</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../bbp-bom</relativePath>
     </parent>
-    <groupId>com.bbp</groupId>
+
     <artifactId>bbp-admin-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>bbp-admin-service</name>
-    <description>Demo project for Spring Boot</description>
-
-    <properties>
-        <java.version>11</java.version>
-        <spring-boot-admin-starter.version>2.1.5</spring-boot-admin-starter.version>
-    </properties>
+    <description>Admin service application</description>
 
     <dependencies>
         <dependency>
@@ -41,12 +36,10 @@
         <dependency>
             <groupId>de.codecentric</groupId>
             <artifactId>spring-boot-admin-starter-server</artifactId>
-            <version>${spring-boot-admin-starter.version}</version>
         </dependency>
         <dependency>
             <groupId>de.codecentric</groupId>
             <artifactId>spring-boot-admin-starter-client</artifactId>
-            <version>${spring-boot-admin-starter.version}</version>
         </dependency>
 
         <dependency>
@@ -64,18 +57,6 @@
             <artifactId>spring-boot-starter-jetty</artifactId>
         </dependency>
     </dependencies>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Greenwich.RELEASE</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <build>
         <plugins>
